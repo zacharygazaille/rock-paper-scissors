@@ -12,18 +12,22 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     while (true) {
-        let choice = prompt("1. rock\n2. paper\n3. scissors\nPlease pick: ");
-        if (choice == 1) {
-            return ("rock");
-            break;
-        } else if (choice == 2) {
-            return ("paper");
-            break;
-        } else if (choice == 3) {
-            return ("scissors");
+        let choice = prompt("Rock\nPaper\nScissors\nPlease pick: ");
+        choice = choice.toLowerCase();
+        if (choice == "rock" || choice == "paper" || choice == "scissors") {
+            return (choice);
             break;
         } else {
-            console.log("Please enter a number 1-3.");
+            console.log("Please enter a valid choice");
         }
     }
+}
+
+console.log(getHumanChoice());
+
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+
 }
